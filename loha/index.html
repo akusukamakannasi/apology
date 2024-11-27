@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permintaan Maaf</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Halaman pembuka -->
+    <div class="welcome-page" id="welcome-page">
+      <h1>selamat datang di halaman ini❤️ silahkan isi namamu dulu sebelum masuk✨</h1>
+      <form id="name-form">
+        <input type="text" id="name-input" placeholder="Masukkan namamu" required />
+        <button type="submit">Masuk</button>
+      </form>
+    </div>
+
+    <!-- Halaman utama -->
+    <div class="wrapper" id="main-page" style="display: none">
+      <div class="swipe-container">
+        <!-- Halaman 1 -->
+        <div class="page">
+          <div class="content">
+            <h1>
+              aku tau banget aku uda bikin kamu kecewa berat sama aku sayang... aku juga sadar ko sama kesalahanku, dan... yaa... aku nyesel banget hari itu aku ga fotbar sama kamu😔 aku bener bener minta maaffffffff bangettttt:(( (btw ini
+              di swipe ya sayang, masi ada halaman selanjutnya)
+            </h1>
+          </div>
+        </div>
+        <!-- Halaman 2 -->
+        <div class="page">
+          <div class="content">
+            <h1>
+              aku akan inget inget terus kejadian kemarin, buat introspeksi aku ke kamu di event mendatang. aku juga harus lebih peka sama kamu. aku harus bisa lebih ngertiin kamu lagi, lebih ngehargai kamu lagi, sebagai pacarku yang aku
+              sayang dan cinta sampai kapanpunnn. (swipe lagii)
+            </h1>
+          </div>
+        </div>
+        <!-- Halaman 3 -->
+        <div class="page">
+          <div class="content">
+            <h1>
+              terimakasiii yaaa kalau kamu suda mau menerima permintaan maafku inii ehehe, semoga dengan adanya kejadian kaya gini, buat kedepannya bakal diusahain gabakal ada lagi. terimakasii jugaa kamu tidak mengurangi rasa cintamu sama
+              akuuu.. aku cinta bangett sama kamuuu. (swipe lagi dong, masi ada satu halaman lagi)
+            </h1>
+          </div>
+        </div>
+        <!-- Halaman tambahan dengan tombol besar -->
+        <div class="page" id="last-page">
+          <div class="content">
+            <button class="special-button" onclick="goToNextPage()">Pencet dong</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Halaman interaktif -->
+    <div class="container" id="interactive-page" style="display: none">
+      <h1 class="title">sayang, maafin aku ya? (；′⌒`)</h1>
+      <p class="subtitle">aku berusaha gak akan ngulangin kesalahan ini lagi. kamu mau maafin aku?</p>
+      <div class="button-group">
+        <button class="button yes" onclick="sayYes()">mau</button>
+        <button class="button no" onclick="moveButton()">gamau</button>
+      </div>
+    </div>
+
+    <!-- Halaman selanjutnya -->
+    <div id="next-page" class="hidden">
+      <h1 class="title">yeayyy terima kasih sayangkuu cintakuuu! ~\(≧▽≦)/~</h1>
+      <p class="subtitle">nanti kamu aku kasi hadiah deee🎁 γ(=•ω<=)ρ⌜☆</p>
+      <canvas id="confetti-canvas"></canvas>
+    </div>
+
+    <script>
+      document.getElementById("name-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const name = document.getElementById("name-input").value.trim();
+        if (name) {
+          document.getElementById("welcome-page").style.display = "none";
+          document.getElementById("main-page").style.display = "block";
+        } else {
+          alert("Tolong isi namamu sebelum masuk!");
+        }
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

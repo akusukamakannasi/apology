@@ -1,0 +1,223 @@
+/* Styling untuk seluruh halaman */
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Halaman pembuka */
+.welcome-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #f7c6d2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.welcome-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#welcome-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#welcome-page input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 1rem;
+}
+
+#welcome-page button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6f91;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#welcome-page button:hover {
+  background-color: #ff3366;
+}
+
+/* Wrapper dan container swipe */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swipe-container {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: calc(100vw * 4); /* Total halaman */
+}
+
+.page {
+  flex: 0 0 100vw; /* Lebar setiap halaman */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+}
+
+/* Styling untuk elemen teks di halaman khusus */
+.title,
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem; /* Ukuran font yang diperbesar */
+  color: #333;
+  margin: 0;
+}
+
+/* Page khusus dengan teks "sayang maafin aku ya?" */
+#special-text-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Background untuk setiap halaman */
+.page:nth-child(odd) {
+  background: linear-gradient(135deg, #ff9a9e, #f9c0c0);
+}
+
+.page:nth-child(even) {
+  background: linear-gradient(135deg, #f7a7c9, #ffb6b9);
+}
+
+/* Tombol besar di halaman terakhir */
+.special-button {
+  background: #ff6f91;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.special-button:hover {
+  background: #ff3366;
+  transform: scale(1.1);
+}
+
+/* Styling untuk elemen awal */
+.container,
+#next-page {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 0;
+  animation: fadeIn 2s ease, bounceIn 1s ease;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  animation: fadeIn 2s ease;
+}
+
+/* Grup tombol */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Tombol */
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.yes {
+  background-color: #4caf50;
+  color: white;
+}
+
+.no {
+  background-color: #f44336;
+  color: white;
+  position: relative;
+}
+
+/* Halaman berikutnya */
+.hidden {
+  display: none;
+}
+
+/* Animasi */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Confetti canvas */
+#confetti-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
